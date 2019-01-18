@@ -1,10 +1,13 @@
 {
-  "name": "smart-bus",
+  "name": "smart-bus-mrgadget",
   "version": "0.5.0",
   "license": "MIT",
-  "description": "Node.js implementation of HDL SmartBus protocol",
-  "repository": "caligo-mentis/smart-bus",
-  "author": "Andrey Ivaschenko <andrey.ivashchenko@gmail.com>",
+  "description": "Node.js implementation of HDL SmartBus protocol [Fork of smart-bus]",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrgadget/smart-bus.git"
+  },
+  "author": "@bennuttall",
 
   "main": "index.js",
   "scripts": {
