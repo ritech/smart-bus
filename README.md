@@ -1,6 +1,14 @@
-## SmartBus [![Build Status](https://travis-ci.org/caligo-mentis/smart-bus.svg)](https://travis-ci.org/caligo-mentis/smart-bus)
+## SmartBus Fork
 
-Node.js implementation of HDL SmartBus protocol http://hdlautomation.com
+Node.js implementation of HDL SmartBus protocol http://hdlautomation.com.
+
+### Why Fork?
+
+When someone creates something great, why re-invent the wheel?  The original creator ([caligo-mentis](https://github.com/caligo-mentis)) has done a great job of this library - but I needed some additional functionality which we couldn't agree on how it was implemented.  The vast majority of [caligo-mentis/smart-bus](https://github.com/caligo-mentis/smart-bus) repo is untouched apart from:
+* `sendAs` function - A function that adds the ability to send a message on the bus as any address simply by passing the first argulment as a string (eg `1.50`). This is useful when crafting replies to physical bus devices that must appear to come from a different device - my original use for this was the HDL Dali module didn't correctly send status updates - so I used `sendAs` to impersonate the Dali module and send the status updates.  Yes, this could be achieved with the new multi-bus approach, but I wanted a simple in-line ability to send as anything.
+* `0x0033` parser to enable display of channel status requests
+* `0xE012` parser/encoder for panel brightness and lock commands
+* `0xE14E` parser/encoder for panel button colour.
 
 ### Initialization
 
