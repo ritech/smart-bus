@@ -1,6 +1,6 @@
 {
   "name": "smart-bus-mrgadget",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
   "description": "Node.js implementation of HDL SmartBus protocol [Fork of smart-bus]",
   "repository": {
